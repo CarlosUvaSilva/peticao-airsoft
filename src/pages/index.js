@@ -22,7 +22,7 @@ const IndexPage = () => (
         style={{ height: '70%', padding: '20px 0', boxSizing: 'content-box' }}
       />
       <h1>Ainda não assinaste a petição?</h1>
-      <a className='link' target="_blank" href="https://peticaopublica.com/mobile/pview.aspx?pi=airsoftamendment">
+      <a className='link' target="_blank" href="https://peticaopublica.com/pview.aspx?pi=airsoftamendment">
         <div className='flex-link'>
           <M4 className='svg'/>
           <h2>De que estás à espera</h2>
