@@ -19,6 +19,7 @@ function Seo({ description, lang, meta, title }) {
             title
             description
             author
+            image
           }
         }
       }
@@ -27,6 +28,7 @@ function Seo({ description, lang, meta, title }) {
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
+  const image = site.siteMetadata?.image
 
   return (
     <Helmet
@@ -53,6 +55,10 @@ function Seo({ description, lang, meta, title }) {
           content: `website`,
         },
         {
+          property: `og:image`,
+          content: image,
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
@@ -68,6 +74,10 @@ function Seo({ description, lang, meta, title }) {
           name: `twitter:description`,
           content: metaDescription,
         },
+        {
+          property: `twitter:image`,
+          content: image,
+        }
       ].concat(meta)}
     />
   )
@@ -77,6 +87,8 @@ Seo.defaultProps = {
   lang: `en`,
   meta: [],
   description: ``,
+  image: null
+
 }
 
 Seo.propTypes = {
@@ -84,6 +96,7 @@ Seo.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
+  image: PropTypes.string
 }
 
 export default Seo
