@@ -1,0 +1,56 @@
+@import "../styles/typography.scss";
+
+.container {
+  max-width: 1440px;
+  height: 85vh;
+  margin: auto;
+  text-align: center;
+  h1 {
+    font-family: 'Rene Bieder Bold';
+    font-size: 3rem;
+  }
+  h2 {
+    font-family: 'Rene Bieder Medium';
+    font-size: 2.5rem;
+    margin: 0 20px;
+    line-height: 1.5;
+  }
+  .link {
+    display: inline-block;
+    .flex-link {
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      justify-content: center;
+      &:hover  {
+        .svg {
+          cursor: pointer;
+          transform: rotate(360deg);
+          transition: all 0.5s ease-in-out 0s;
+          &.inverted {
+            cursor: pointer;
+            transform: scaleX(-1) rotate(360deg);
+            transition: all 0.5s ease-in-out 0s;
+          }
+        }
+      }
+    }
+    .svg {
+      width: 75px;
+      height: 75px;
+      // &:hover  {
+      //   cursor: pointer;
+      //   transform: rotate(360deg);
+      //   transition: all 0.3s ease-in-out 0s;
+      // }
+      &.inverted {
+        transform: scaleX(-1);
+        // &:hover  {
+        //   cursor: pointer;
+        //   transform: scaleX(-1) rotate(360deg);
+        //   transition: all 0.3s ease-in-out 0s;
+        // }
+      }
+    }
+  }
+}
