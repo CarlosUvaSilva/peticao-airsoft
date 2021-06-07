@@ -29,8 +29,8 @@ function Seo({ description, lang, meta, title }) {
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
   const siteUrl = site.siteMetadata?.url
-  const image = `${siteUrl}${image}`
-  // const image = `adw`
+  const image = site.siteMetadata?.image
+  const OGimage = `${siteUrl}${image}`
 
   return (
     <Helmet
@@ -58,7 +58,7 @@ function Seo({ description, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content: image,
+          content: OGimage,
         },
         {
           name: `twitter:card`,
@@ -78,7 +78,7 @@ function Seo({ description, lang, meta, title }) {
         },
         {
           property: `twitter:image`,
-          content: image,
+          content: OGimage,
         }
       ].concat(meta)}
     />
