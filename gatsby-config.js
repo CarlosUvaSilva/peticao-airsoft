@@ -4,7 +4,7 @@ module.exports = {
     description: `Petição para mudança das leis do Airsoft.`,
     author: `@CarlosUvaSilva`,
     url: `https://www.airsoft-peticao.pt`,
-    image: '/static/qr.png'
+    image: '/qr.png'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
