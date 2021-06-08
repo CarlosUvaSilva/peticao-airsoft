@@ -11,6 +11,7 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-fontawesome-css`,
+    `gatsby-plugin-dark-mode`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -46,7 +47,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/bomene.png`, // This path is relative to the root of the site.
+        icon: `src/images/qr.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-gatsby-cloud`,
