@@ -14,6 +14,7 @@ const IndexPage = () => (
     <Seo title="Airsoft Petição" />
     <div className="container">
       <StaticImage
+        className='desktop-image'
         src="../images/peticao.png"
         width={1440}
         quality={95}
@@ -21,14 +22,26 @@ const IndexPage = () => (
         alt="landing page image"
         style={{ height: '70%', padding: '20px 0', boxSizing: 'content-box' }}
       />
-      <h1>Ainda não assinaste a petição?</h1>
-      <a className='link' target="_blank" href="https://peticaopublica.com/pview.aspx?pi=airsoftamendment">
-        <div className='flex-link'>
-          <M4 className='svg'/>
-          <h2>De que estás à espera</h2>
-          <AK className='svg inverted'/>
-        </div>
-      </a>
+      <StaticImage
+        className='mobile-image'
+        src="../images/peticao-mobile.png"
+        width={350}
+        quality={95}
+        objectFit={'cover'}
+        formats={["AUTO", "WEBP", "AVIF"]}
+        alt="landing page image"
+        style={{ padding: '50px 50px', boxSizing: 'content-box' }}
+      />
+      <div className="description-container">
+        <h1>Apoia um airsoft melhor</h1>
+        <a className='link' target="_blank" href="https://peticaopublica.com/pview.aspx?pi=airsoftamendment">
+          <div className='flex-link'>
+            {/*<M4 className='svg'/>*/}
+            <h2>ASSINA A PETIÇÃO</h2>
+            {/*<AK className='svg inverted'/>*/}
+          </div>
+        </a>
+      </div>
     </div>
   </Layout>
 )

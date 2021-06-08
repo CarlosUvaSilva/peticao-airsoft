@@ -5,9 +5,33 @@
   height: 85vh;
   margin: auto;
   text-align: center;
+  @media only screen and (max-width: 425px) {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .desktop-image {
+    margin-bottom: 20px;
+    @media only screen and (max-width: 425px) {
+      display: none;
+    }
+  }
+  .mobile-image {
+    margin-bottom: 50px;
+    @media only screen and (min-width: 426px) {
+      display: none;
+    }
+  }
   h1 {
     font-family: 'Rene Bieder Bold';
     font-size: 3rem;
+    @media only screen and (max-width: 425px) {
+      padding: 0 10px;
+      font-size: 2rem;
+      margin-bottom: 0;
+    }
   }
   h2 {
     font-family: 'Rene Bieder Medium';
@@ -17,11 +41,17 @@
   }
   .link {
     display: inline-block;
+    text-decoration-color: black;
+    @media only screen and (max-width: 425px) {
+      padding: 20px 0;
+    }
     .flex-link {
       display: flex;
       flex-direction: row;
       align-content: center;
       justify-content: center;
+      color: black;
+      text-decoration-color: black;
       &:hover  {
         .svg {
           cursor: pointer;
