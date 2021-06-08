@@ -34,7 +34,7 @@ const IndexPage = () => (
       />
       <div className="description-container">
         <h1>Apoia um airsoft melhor</h1>
-        <a className='link' target="_blank" href="https://peticaopublica.com/pview.aspx?pi=airsoftamendment">
+        <a className='link' target="_blank" rel="noreferrer" href="https://peticaopublica.com/pview.aspx?pi=airsoftamendment">
           <div className='flex-link'>
             {/*<M4 className='svg'/>*/}
             <h2>ASSINA A PETIÇÃO</h2>
