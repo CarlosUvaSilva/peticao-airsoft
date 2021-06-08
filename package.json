@@ -10,6 +10,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
     "gatsby": "^3.6.2",
+    "gatsby-plugin-dark-mode": "github:alvinometric/gatsby-plugin-dark-mode#patch-1",
     "gatsby-plugin-fontawesome-css": "^1.1.0",
     "gatsby-plugin-gatsby-cloud": "^2.6.1",
     "gatsby-plugin-google-gtag": "^3.6.0",
