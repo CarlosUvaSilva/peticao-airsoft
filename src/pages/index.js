@@ -70,7 +70,7 @@ const IndexPage = () => {
             timeout={3000} //3 secs
           />
           {
-            voteCount ? <h2>{voteCount} já assinaram</h2> : null
+            voteCount ? <h2>{voteCount} já assinaram</h2> : <h2></h2>
           }
         </div>
       </div>
