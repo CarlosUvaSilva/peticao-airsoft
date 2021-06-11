@@ -23,7 +23,6 @@ const IndexPage = () => {
         url: petitionURL
       }
     }).then(response => {
-      console.log("parsed data:", response)
       setVoteCount(response.data)
       setLoader(false)
     })
@@ -35,7 +34,7 @@ const IndexPage = () => {
       <div className="container">
         <StaticImage
           className='desktop-image'
-          src="../images/peticao-small.png"
+          src="../images/peticao.png"
           width={1440}
           height={300}
           quality={95}
