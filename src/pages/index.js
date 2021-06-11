@@ -36,7 +36,6 @@ const IndexPage = () => {
           className='desktop-image'
           src="../images/peticao.png"
           width={1440}
-          height={300}
           quality={95}
           formats={["AUTO", "WEBP", "AVIF"]}
           alt="landing page image"
@@ -50,7 +49,7 @@ const IndexPage = () => {
           objectFit={'cover'}
           formats={["AUTO", "WEBP", "AVIF"]}
           alt="landing page image"
-          style={{ padding: '50px 50px', boxSizing: 'content-box' }}
+          style={{ padding: '0 25px', boxSizing: 'content-box' }}
         />
         <div className="description-container">
           <h1>Apoia um airsoft melhor</h1>
