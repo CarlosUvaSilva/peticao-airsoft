@@ -10,7 +10,7 @@ import AK from "../images/ak.svg";
 import "./index.scss"
 
 const IndexPage = () => (
-  <Layout style={{ backgroundColor: 'yellow' }}>
+  <Layout>
     <Seo title="Airsoft Petição" />
     <div className="container">
       <StaticImage

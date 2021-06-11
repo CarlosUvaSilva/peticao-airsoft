@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <div style={{ margin: `0 auto` }}>
-        <main style={{ backgroundColor: 'yellow', margin: 'auto' }}>
+        <main style={{ margin: 'auto' }}>
           {children}
         </main>
         <Footer />
