@@ -44,12 +44,12 @@ const IndexPage = () => {
         <StaticImage
           className='mobile-image'
           src="../images/peticao-mobile.png"
-          width={350}
+          width={320}
           quality={95}
           objectFit={'cover'}
           formats={["AUTO", "WEBP", "AVIF"]}
           alt="landing page image"
-          style={{ padding: '0 25px', boxSizing: 'content-box' }}
+          style={{ boxSizing: 'content-box' }}
         />
         <div className="description-container">
           <h1>Apoia um airsoft melhor</h1>
