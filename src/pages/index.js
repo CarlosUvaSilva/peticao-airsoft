@@ -12,21 +12,16 @@ import "./index.scss"
 const IndexPage = () => {
   const [data, setData] = React.useState(0)
 
+  const petitionURL = 'https://peticaopublica.com/pview.aspx?pi=airsoftamendment'
 
-  const options = {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json; charset=utf-8"
-    },
-    body: JSON.stringify({
-      pageToParse: "https://peticaopublica.com/pview.aspx?pi=airsoftamendment"
-    })
-  };
   React.useEffect(() => {
-    axios.get("/.netlify/functions/node-fetch/node-fetch")
-    .then(response => {
+    axios.get("/.netlify/functions/petition-count", {
+      params: {
+        url: petitionURL
+      }
+    }).then(response => {
       console.log("parsed data:", response)
-      setData(response.data.data.length)
+      setData(response.data)
     })
   }, [])
 
@@ -55,7 +50,7 @@ const IndexPage = () => {
         />
         <div className="description-container">
           <h1>Apoia um airsoft melhor</h1>
-          <a className='link' target="_blank" rel="noreferrer" href="https://peticaopublica.com/pview.aspx?pi=airsoftamendment">
+          <a className='link' target="_blank" rel="noreferrer" href={petitionURL}>
             <div className='flex-link'>
               {/*<M4 className='svg'/>*/}
               <h2>ASSINA A PETIÇÃO! </h2>
