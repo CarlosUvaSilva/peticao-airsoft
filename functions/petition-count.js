@@ -14,15 +14,8 @@ exports.handler = async (event, context) => {
 
   await page.goto(pageToParse);
 
-  // const voteCount = document.querySelector('.npeople' ).className
-  // const voteCount = await page.evaluate(() => document.querySelector('.npeople' ).className);
-
   const voteCount = await page.waitForSelector('.npeople');
   const voteCountValue = await voteCount.evaluate(el => el.textContent);
-
-  console.log("voteCount: ", voteCount)
-  console.log("voteCount VALUE: ", voteCountValue)
-  // const screenshot = await page.screenshot({ encoding: 'binary' });
 
   await browser.close();
 
@@ -30,11 +23,4 @@ exports.handler = async (event, context) => {
     statusCode: 200,
     body: JSON.stringify(voteCountValue)
   }
-  // return {
-  //   statusCode: 200,
-  //   body: JSON.stringify({
-  //     message: `FUNCTIONS`
-  //   })
-  // }
-
 }

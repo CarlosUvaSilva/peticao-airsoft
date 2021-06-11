@@ -2,6 +2,8 @@ import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import axios from 'axios'
+import Loader from "react-loader-spinner";
+
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 import M4 from "../images/m4.svg";
@@ -10,7 +12,8 @@ import AK from "../images/ak.svg";
 import "./index.scss"
 
 const IndexPage = () => {
-  const [data, setData] = React.useState(0)
+  const [voteCount, setVoteCount] = React.useState(0)
+  const [loader, setLoader] = React.useState(true)
 
   const petitionURL = 'https://peticaopublica.com/pview.aspx?pi=airsoftamendment'
 
@@ -21,7 +24,8 @@ const IndexPage = () => {
       }
     }).then(response => {
       console.log("parsed data:", response)
-      setData(response.data)
+      setVoteCount(response.data)
+      setLoader(false)
     })
   }, [])
 
@@ -53,11 +57,22 @@ const IndexPage = () => {
           <a className='link' target="_blank" rel="noreferrer" href={petitionURL}>
             <div className='flex-link'>
               {/*<M4 className='svg'/>*/}
-              <h2>ASSINA A PETIÇÃO! </h2>
-              <h2>cona - {data}</h2>
+              <h2>ASSINA A PETIÇÃO!</h2>
               {/*<AK className='svg inverted'/>*/}
             </div>
           </a>
+          <Loader
+            visible={loader}
+            type="Oval"
+            color="black"
+            secondaryColor="black"
+            height={50}
+            width={50}
+            timeout={3000} //3 secs
+          />
+          {
+            voteCount ? <h2>{voteCount} já assinaram</h2> : null
+          }
         </div>
       </div>
     </Layout>
