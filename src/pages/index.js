@@ -68,7 +68,7 @@ const IndexPage = () => {
             secondaryColor="black"
             height={50}
             width={50}
-            timeout={3000} //3 secs
+            timeout={5000} //3 secs
           />
           {
             voteCount ? <h2>{voteCount} já assinaram</h2> : null
