@@ -1,6 +1,37 @@
-.footer {
-  // background-color: black;
-  height: 15vh;
+footer {
+  background-color: var(--footer-color);
+  height: 10vh;
+  position: sticky;
+  width: 100%;
+  bottom: 0;
+  padding: 0 40px;
+  // @media only screen and (max-width: 425px) {
+  //   bottom: unset;
+  //   position: block;
+  // }
+  .icon-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    .icon-link {
+      display: flex;
+      flex-direction: row;
+      color: white;
+      text-decoration: none;
+      align-items: center;
 
-  background-color: var(--bg-color)
+      p {
+        font-family: 'Rene Bieder Book';
+        font-size: 32px;
+        margin: 0;
+        margin-left: 16px;
+        letter-spacing: 2px;
+        @media only screen and (max-width: 425px) {
+          display: none;
+        }
+      }
+    }
+  }
 }

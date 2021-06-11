@@ -23,7 +23,6 @@ const IndexPage = () => {
         url: petitionURL
       }
     }).then(response => {
-      console.log("parsed data:", response)
       setVoteCount(response.data)
       setLoader(false)
     })
@@ -40,17 +39,17 @@ const IndexPage = () => {
           quality={95}
           formats={["AUTO", "WEBP", "AVIF"]}
           alt="landing page image"
-          style={{ height: '70%', padding: '20px 0', boxSizing: 'content-box' }}
+          style={{ padding: '20px 0', boxSizing: 'content-box' }}
         />
         <StaticImage
           className='mobile-image'
           src="../images/peticao-mobile.png"
-          width={350}
+          width={320}
           quality={95}
           objectFit={'cover'}
           formats={["AUTO", "WEBP", "AVIF"]}
           alt="landing page image"
-          style={{ padding: '50px 50px', boxSizing: 'content-box' }}
+          style={{ boxSizing: 'content-box' }}
         />
         <div className="description-container">
           <h1>Apoia um airsoft melhor</h1>
@@ -61,17 +60,19 @@ const IndexPage = () => {
               {/*<AK className='svg inverted'/>*/}
             </div>
           </a>
-          <Loader
-            visible={loader}
-            type="Oval"
-            color="black"
-            secondaryColor="black"
-            height={50}
-            width={50}
-            timeout={5000} //3 secs
-          />
           {
-            voteCount ? <h2>{voteCount} já assinaram</h2> : null
+            voteCount ?
+              <h2>{voteCount} já assinaram</h2>
+              :
+              <Loader
+                visible={loader}
+                type="Oval"
+                color="black"
+                secondaryColor="black"
+                height={65}
+                width={65}
+                // timeout={3000} //3 secs
+              />
           }
         </div>
       </div>
