@@ -9,7 +9,7 @@ import "./styles.scss"
 
 const Footer = () => (
   <div className='footer'>
-    {/*<h1 style={{ margin: 0 }}>
+    {<h1 style={{ margin: 0 }}>
       <Link
         to="/"
         style={{
@@ -20,7 +20,7 @@ const Footer = () => (
       OLA
       </Link>
       <FontAwesomeIcon icon={faTwitter} color="blue"/>
-    </h1>*/}
+    </h1>}
   </div>
 )
 

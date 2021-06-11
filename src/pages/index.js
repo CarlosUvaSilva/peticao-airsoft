@@ -35,12 +35,13 @@ const IndexPage = () => {
       <div className="container">
         <StaticImage
           className='desktop-image'
-          src="../images/peticao.png"
+          src="../images/peticao-small.png"
           width={1440}
+          height={300}
           quality={95}
           formats={["AUTO", "WEBP", "AVIF"]}
           alt="landing page image"
-          style={{ height: '70%', padding: '20px 0', boxSizing: 'content-box' }}
+          style={{ padding: '20px 0', boxSizing: 'content-box' }}
         />
         <StaticImage
           className='mobile-image'
