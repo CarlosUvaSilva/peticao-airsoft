@@ -1,0 +1,105 @@
+@import "../styles/typography.scss";
+
+.container {
+  max-width: 1440px;
+  height: 90vh;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  @media only screen and (max-width: 425px) {
+    // height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .accordion {
+    max-width: 1080px;
+    min-width: 1024px;
+    padding: 0 20px;
+    border: none;
+    @media only screen and (max-width: 425px) {
+      max-width: 100%;
+      min-width: unset;
+    }
+  }
+  .desktop-image {
+    margin-bottom: 20px;
+    @media only screen and (max-width: 425px) {
+      display: none;
+    }
+  }
+  .mobile-image {
+    margin-bottom: 25px;
+    @media only screen and (min-width: 426px) {
+      display: none;
+    }
+  }
+  h1 {
+    font-family: 'Rene Bieder Bold';
+    font-size: 3rem;
+    letter-spacing: 2px;
+    @media only screen and (max-width: 425px) {
+      padding: 0 10px;
+      font-size: 2rem;
+      margin-bottom: 0;
+    }
+  }
+  h2 {
+    font-family: 'Rene Bieder Medium';
+    font-size: 2.5rem;
+    margin: 0 20px;
+    line-height: 1.5;
+    letter-spacing: 2px;
+  }
+  .empty-space {
+    height: 67px;
+  }
+  .link {
+    display: inline-block;
+    text-decoration-color: black;
+    @media only screen and (max-width: 425px) {
+      padding: 20px 0;
+    }
+    .flex-link {
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      justify-content: center;
+      color: black;
+      text-decoration-color: black;
+      &:hover  {
+        .svg {
+          cursor: pointer;
+          transform: rotate(360deg);
+          transition: all 0.5s ease-in-out 0s;
+          &.inverted {
+            cursor: pointer;
+            transform: scaleX(-1) rotate(360deg);
+            transition: all 0.5s ease-in-out 0s;
+          }
+        }
+      }
+    }
+    .svg {
+      width: 75px;
+      height: 75px;
+      // &:hover  {
+      //   cursor: pointer;
+      //   transform: rotate(360deg);
+      //   transition: all 0.3s ease-in-out 0s;
+      // }
+      &.inverted {
+        transform: scaleX(-1);
+        // &:hover  {
+        //   cursor: pointer;
+        //   transform: scaleX(-1) rotate(360deg);
+        //   transition: all 0.3s ease-in-out 0s;
+        // }
+      }
+    }
+  }
+}
