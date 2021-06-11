@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-
+import axios from 'axios'
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 import M4 from "../images/m4.svg";
@@ -10,6 +10,9 @@ import AK from "../images/ak.svg";
 import "./index.scss"
 
 const IndexPage = () => {
+  const [data, setData] = React.useState(0)
+
+
   const options = {
     method: "POST",
     headers: {
@@ -19,10 +22,13 @@ const IndexPage = () => {
       pageToParse: "https://peticaopublica.com/pview.aspx?pi=airsoftamendment"
     })
   };
-
-  // fetch("/.netlify/functions/take-screenshot", options);
-  fetch("/.netlify/functions/petition-count", options)
-    .then(response => console.log("COUNT: ", response))
+  React.useEffect(() => {
+    axios.get("/.netlify/functions/node-fetch/node-fetch")
+    .then(response => {
+      console.log("parsed data:", response)
+      setData(response.data.data.length)
+    })
+  }, [])
 
   return (
     <Layout>
@@ -52,7 +58,8 @@ const IndexPage = () => {
           <a className='link' target="_blank" rel="noreferrer" href="https://peticaopublica.com/pview.aspx?pi=airsoftamendment">
             <div className='flex-link'>
               {/*<M4 className='svg'/>*/}
-              <h2>ASSINA A PETIÇÃO!</h2>
+              <h2>ASSINA A PETIÇÃO! </h2>
+              <h2>cona - {data}</h2>
               {/*<AK className='svg inverted'/>*/}
             </div>
           </a>

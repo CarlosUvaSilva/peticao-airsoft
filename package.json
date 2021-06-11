@@ -9,6 +9,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
+    "axios": "^0.21.1",
     "chrome-aws-lambda": "^10.0.0",
     "gatsby": "^3.6.2",
     "gatsby-plugin-dark-mode": "github:alvinometric/gatsby-plugin-dark-mode#patch-1",
