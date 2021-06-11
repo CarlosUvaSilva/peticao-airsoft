@@ -60,17 +60,20 @@ const IndexPage = () => {
               {/*<AK className='svg inverted'/>*/}
             </div>
           </a>
-          <Loader
-            visible={loader}
-            type="Oval"
-            color="black"
-            secondaryColor="black"
-            height={50}
-            width={50}
-            timeout={3000} //3 secs
-          />
+
           {
-            voteCount ? <h2>{voteCount} já assinaram</h2> : <h2></h2>
+            voteCount ?
+              <h2>{voteCount} já assinaram</h2>
+              :
+              <Loader
+                visible={loader}
+                type="Oval"
+                color="black"
+                secondaryColor="black"
+                height={65}
+                width={65}
+                // timeout={3000} //3 secs
+              />
           }
         </div>
       </div>
