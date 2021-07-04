@@ -13,7 +13,7 @@ import "./styles.scss"
 const Footer = () => (
   <footer>
     <div className="icon-container">
-      <a className="icon-link" target="_blank" rel="noreferrer" href="https://discord.gg/jyNuZBDj">
+      <a className="icon-link" target="_blank" rel="noreferrer" href="https://discord.gg/Yjst8pASY5">
         <Icon size={40} name='discord' />
         <p>Discord</p>
       </a>
