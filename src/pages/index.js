@@ -37,9 +37,10 @@ const IndexPage = () => {
           src="../images/peticao-red.png"
           width={1440}
           quality={95}
+          objectFit={'cover'}
           formats={["AUTO", "WEBP", "AVIF"]}
           alt="landing page image"
-          style={{ padding: '20px 0', boxSizing: 'content-box' }}
+          style={{ boxSizing: 'content-box' }}
         />
         <StaticImage
           className='mobile-image'
