@@ -4,7 +4,7 @@ module.exports = {
     description: `Petição para mudança das leis do Airsoft.`,
     author: `@CarlosUvaSilva`,
     url: `https://www.airsoft-peticao.pt`,
-    image: '/banner.png',
+    image: '/banner-red.png',
     keywords: 'airsoft, portugal, petição, peticao, pinturas, fps, joules, rjam, lei das armas'
   },
   plugins: [
