@@ -14,7 +14,7 @@ import "./index.scss"
 const IndexPage = () => {
   const [voteCount, setVoteCount] = React.useState(0)
   const [loader, setLoader] = React.useState(true)
-
+  console.log("voteCount: ", voteCount)
   const petitionURL = 'https://peticaopublica.com/pview.aspx?pi=airsoftamendment'
 
   React.useEffect(() => {
@@ -34,7 +34,7 @@ const IndexPage = () => {
       <div className="container">
         <StaticImage
           className='desktop-image'
-          src="../images/peticao-red.png"
+          src="../images/peticao.png"
           width={1440}
           quality={95}
           objectFit={'cover'}
@@ -44,7 +44,7 @@ const IndexPage = () => {
         />
         <StaticImage
           className='mobile-image'
-          src="../images/peticao-mobile-red.png"
+          src="../images/peticao-mobile.png"
           width={320}
           quality={95}
           objectFit={'cover'}
@@ -53,28 +53,35 @@ const IndexPage = () => {
           style={{ boxSizing: 'content-box' }}
         />
         <div className="description-container">
-          <h1>Apoia um airsoft melhor</h1>
+        {
+          voteCount ?
+          <h2>Faltam {7500 - (voteCount * 1000)} Assinaturas</h2>
+          :
+          <h2>Apoia um airsoft melhor</h2>
+        }
           <a className='link' target="_blank" rel="noreferrer" href={petitionURL}>
             <div className='flex-link'>
               {/*<M4 className='svg'/>*/}
-              <h2>ASSINA A PETIÇÃO!</h2>
+              <h1 className='cta'>ASSINA A PETIÇÃO!</h1>
               {/*<AK className='svg inverted'/>*/}
             </div>
           </a>
-          {
-            voteCount ?
-              <h2>{voteCount} já assinaram</h2>
-              :
-              <Loader
-                visible={loader}
-                type="Oval"
-                color="black"
-                secondaryColor="black"
-                height={65}
-                width={65}
-                // timeout={3000} //3 secs
-              />
-          }
+          <div className='counter' style={{ height: '67.5px' }}>
+            {
+              voteCount ?
+                <h2 >{voteCount} já assinaram</h2>
+                :
+                <Loader
+                  visible={loader}
+                  type="Oval"
+                  color="black"
+                  secondaryColor="black"
+                  height={50}
+                  width={65}
+                  // timeout={3000} //3 secs
+                />
+            }
+          </div>
         </div>
       </div>
     </Layout>

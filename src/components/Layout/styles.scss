@@ -18,11 +18,11 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
-  --bg-color: #ff0000;
+  --bg-color: #ffff01;
   --footer-color: black;
   background-color: var(--bg-color);
   &.dark {
-    --bg-color: #ff0000;
+    --bg-color: #ffff01;
     --footer-color: black;
     background-color: var(--bg-color);
     color: hsla(0, 0%, 0%, 0.8);
