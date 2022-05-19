@@ -34,7 +34,7 @@ const IndexPage = () => {
       <div className="container">
         <StaticImage
           className='desktop-image'
-          src="../images/peticao.png"
+          src="../images/murica.jpg"
           width={1440}
           quality={95}
           objectFit={'cover'}
