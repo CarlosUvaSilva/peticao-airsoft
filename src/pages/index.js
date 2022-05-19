@@ -55,7 +55,10 @@ const IndexPage = () => {
         <div className="description-container">
         {
           voteCount ?
-          <h2>Faltam {7500 - (voteCount * 1000)} Assinaturas</h2>
+            7500 - (voteCount * 1000) > 50 ?
+              <h2>Faltam {7500 - (voteCount * 1000)} Assinaturas</h2>
+              :
+              <h2></h2>
           :
           <h2>Apoia um airsoft melhor</h2>
         }
