@@ -36,7 +36,7 @@ const IndexPage = () => {
       <div className="container">
         <StaticImage
           className='desktop-image'
-          src="../images/murica.jpg"
+          src="../images/peticao.png"
           width={1440}
           quality={95}
           objectFit={'cover'}
@@ -54,45 +54,7 @@ const IndexPage = () => {
           alt="landing page image"
           style={{ boxSizing: 'content-box' }}
         />
-<<<<<<< Updated upstream
-        <div className="description-container">
-        {
-          voteCount ?
-            7500 - (voteCount * 1000) > 50 ?
-              <h2>Faltam {7500 - (voteCount * 1000)} Assinaturas</h2>
-              :
-              <h2></h2>
-          :
-          <h2>Apoia um airsoft melhor</h2>
-        }
-          <a className='link' target="_blank" rel="noreferrer" href={petitionURL}>
-            <div className='flex-link'>
-              {/*<M4 className='svg'/>*/}
-              <h1 className='cta'>ASSINA A PETIÇÃO!</h1>
-              {/*<AK className='svg inverted'/>*/}
-            </div>
-          </a>
-          <div className='counter' style={{ height: '67.5px' }}>
-            {
-              voteCount ?
-                <h2 >{voteCount} já assinaram</h2>
-                :
-                <Loader
-                  visible={loader}
-                  type="Oval"
-                  color="black"
-                  secondaryColor="black"
-                  height={50}
-                  width={65}
-                  // timeout={3000} //3 secs
-                />
-            }
-          </div>
-        </div>
-=======
         <img src={marceloGIF} alt="Otter dancing with a fish" />
-
->>>>>>> Stashed changes
       </div>
     </Layout>
   )
