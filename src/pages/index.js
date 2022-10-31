@@ -9,24 +9,26 @@ import Seo from "../components/Seo"
 import M4 from "../images/m4.svg";
 import AK from "../images/ak.svg";
 
+import marceloGIF from '../gifs/marcelo.gif'
+
 import "./index.scss"
 
 const IndexPage = () => {
-  const [voteCount, setVoteCount] = React.useState(0)
-  const [loader, setLoader] = React.useState(true)
-  console.log("voteCount: ", voteCount)
+  // const [voteCount, setVoteCount] = React.useState(0)
+  // const [loader, setLoader] = React.useState(true)
+  // console.log("voteCount: ", voteCount)
   const petitionURL = 'https://peticaopublica.com/pview.aspx?pi=airsoftamendment'
 
-  React.useEffect(() => {
-    axios.get("/.netlify/functions/petition-count", {
-      params: {
-        url: petitionURL
-      }
-    }).then(response => {
-      setVoteCount(response.data)
-      setLoader(false)
-    })
-  }, [])
+  // React.useEffect(() => {
+  //   axios.get("/.netlify/functions/petition-count", {
+  //     params: {
+  //       url: petitionURL
+  //     }
+  //   }).then(response => {
+  //     setVoteCount(response.data)
+  //     setLoader(false)
+  //   })
+  // }, [])
 
   return (
     <Layout>
@@ -52,6 +54,7 @@ const IndexPage = () => {
           alt="landing page image"
           style={{ boxSizing: 'content-box' }}
         />
+<<<<<<< Updated upstream
         <div className="description-container">
         {
           voteCount ?
@@ -86,6 +89,10 @@ const IndexPage = () => {
             }
           </div>
         </div>
+=======
+        <img src={marceloGIF} alt="Otter dancing with a fish" />
+
+>>>>>>> Stashed changes
       </div>
     </Layout>
   )
